@@ -203,7 +203,7 @@ export class ParcelResolver {
 
     getParcel(parcelData: any): ParcelGQL {
         const coordinates = parcelData.location.match(
-            /\d+\.\d*/g,
+            /-?\d+\.\d*/g,
         )
         const longitude = coordinates[0]
         const latitude = coordinates[1]
